@@ -17,6 +17,10 @@
     #main {margin-left: 120px}
     /* Remove margins from "page content" on small screens */
     @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    table, th, td {
+  		border: 0px solid black;
+  		border-collapse: collapse;
+	  }
     </style>
   </head>
 <body class="w3-sand">
@@ -76,62 +80,62 @@ function fncCal()
 <form action="page.cgi" method="post" name="form1">
     <table style="width:100%">
         <tr>
-            <th>&nbsp;</th>
-            <th>&nbsp;</th>
+            <th align="center" colspan="2" style="background-color: #674ea7">&nbsp;</th>
         </tr>
         <tr>
-            <th>&nbsp;</th>
-            <th>&nbsp;</th>
-        </tr>
-        <tr>
-        <th align="center" colspan="2">สูตรคำนวณหักค่าสินทรัพย์</th>
+        <th align="center" colspan="2" style="background-color: #674ea7"><p style="color:white;">สูตรคำนวณหักค่าสินทรัพย์</p></th>
         </tr>   
         <tr>
-            <th>&nbsp;</th>
-            <th>&nbsp;</th>
+            <th align="center" colspan="2" style="background-color: #674ea7">&nbsp;</th>
         </tr>
-        <tr>
-            <th align="right">อายุใช้งานสินค้า : </th>
+        <tr style="background-color: #FDEBD0">
+            <th align="center" colspan="2">&nbsp;</th>
+        </tr>
+        <tr style="background-color: #FDEBD0">
+            <th align="right" >อายุใช้งานสินค้า : </th>
             <th align="left"><input name="txtVol[]" id="txtVol1" type="text" size="15"> ปี <br></th>
         </tr>
-        <tr>    
+        <tr style="background-color: #FDEBD0">    
             <th align="right">ราคา : </th>
             <th align="left"><input name="txtVol[]" id="txtVol2" type="text" size="15"> บาท <br></th>
         </tr>
-        <tr>
+        <tr style="background-color: #FDEBD0">
             <th align="right">ใส่วันที่ปัจจุบัน : </th>
             <th align="left"><input name="txtVol[]" id="txtVol3" type="date"><br></th>
-        <tr>
+        <tr style="background-color: #FDEBD0">
             <th align="right">ใส่วันที่รับของเข้า : </th>
             <th align="left"><input name="txtVol[]" id="txtVol4" type="date"><br></th>
         </tr> 
-        <tr>
+        <tr style="background-color: #FDEBD0">
             <th align="right">&nbsp;</th>
             <th align="left"><input name="btnCal" type="button" value="คำนวณ" OnClick="JavaScript:fncCal();">&nbsp;<input type="reset"></th>
         </tr>
-        <tr>
+        <tr style="background-color: #FDEBD0">
             <th>&nbsp;</th>
             <th>&nbsp;</th>
         </tr>
-        <tr>
+        <tr style="background-color: #FDEBD0">
             <th align="right">อายุใช้งาน : </th>
             <th align="left"><input name="txtVol[]" id="txtVol5" type="text" size="15"> วัน <br></th>
         </tr>
-        <tr>
+        <tr style="background-color: #FDEBD0">
             <th align="right">คิดต่อวัน : </th>
             <th align="left"><input name="txtVol[]" id="txtVol6" type="text" size="15"> วัน <br></th>
         </tr>
-        <tr>
+        <tr style="background-color: #FDEBD0">
             <th align="right">ใช้ไปแล้ว : </th>
             <th align="left"><input name="txtVol[]" id="txtVol7" type="text" size="15"> วัน <br></th>
         </tr>
-        <tr>
+        <tr style="background-color: #FDEBD0">
             <th align="right">เหลือวัน : </th>
             <th align="left"><input name="txtVol[]" id="txtVol8" type="text" size="15"> วัน <br></th>
         </tr>
-        <tr>
+        <tr style="background-color: #FDEBD0">
             <th align="right">ต้องหักเงิน : </th>
             <th align="left"><input name="txtVol[]" id="txtVol9" type="text" size="15" style="color:red;"> บาท <br></th>
+        </tr>
+        <tr style="background-color: #FDEBD0">
+            <th align="center" colspan="2">&nbsp;</th>
         </tr>
     </table>
 </form>
