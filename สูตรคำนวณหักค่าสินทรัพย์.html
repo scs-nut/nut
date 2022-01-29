@@ -1,0 +1,104 @@
+<html>
+<head>
+<style>
+	body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+	table, th, td {
+  		border: 0px solid black;
+  		border-collapse: collapse;
+	}
+</style>
+<title>NUT Finance Creator</title>
+</head>
+<body>
+<script language="javascript">
+function fncCal()
+{
+    var a1 = parseInt(form1.txtVol1.value);
+    var a2 = 0;
+    a2 = (a1*365);
+    form1.txtVol5.value = a2;
+
+    var a3 = parseInt(form1.txtVol2.value);
+    var a4 = 0;
+    a4 = (a3/a2);
+    form1.txtVol6.value = a4.toFixed(2);
+
+    var a5 = new Date(form1.txtVol3.value);
+    var a6 = new Date(form1.txtVol4.value);
+    var a7 = (a5-a6)/(1000*60*60*24);
+    form1.txtVol7.value = a7;
+
+    var a8 = a2-a7;
+    form1.txtVol8.value = a8;
+
+    var a9 = a4*a8;
+    form1.txtVol9.value = a9.toFixed(2);
+
+}
+</script>
+<center>
+<form action="page.cgi" method="post" name="form1">
+    <table style="width:100%">
+        <tr>
+            <th align="center" colspan="2" style="background-color: #674ea7">&nbsp;</th>
+        </tr>
+        <tr>
+        <th align="center" colspan="2" style="background-color: #674ea7"><p style="color:white;">สูตรคำนวณหักค่าสินทรัพย์</p></th>
+        </tr>   
+        <tr>
+            <th align="center" colspan="2" style="background-color: #674ea7">&nbsp;</th>
+        </tr>
+        <tr style="background-color: #FDEBD0">
+            <th align="center" colspan="2">&nbsp;</th>
+        </tr>
+        <tr style="background-color: #FDEBD0">
+            <th align="right" >อายุใช้งานสินค้า : </th>
+            <th align="left"><input name="txtVol[]" id="txtVol1" type="text" size="15"> ปี <br></th>
+        </tr>
+        <tr style="background-color: #FDEBD0">    
+            <th align="right">ราคา : </th>
+            <th align="left"><input name="txtVol[]" id="txtVol2" type="text" size="15"> บาท <br></th>
+        </tr>
+        <tr style="background-color: #FDEBD0">
+            <th align="right">ใส่วันที่ปัจจุบัน : </th>
+            <th align="left"><input name="txtVol[]" id="txtVol3" type="date"><br></th>
+        <tr style="background-color: #FDEBD0">
+            <th align="right">ใส่วันที่รับของเข้า : </th>
+            <th align="left"><input name="txtVol[]" id="txtVol4" type="date"><br></th>
+        </tr> 
+        <tr style="background-color: #FDEBD0">
+            <th align="right">&nbsp;</th>
+            <th align="left"><input name="btnCal" type="button" value="คำนวณ" OnClick="JavaScript:fncCal();">&nbsp;<input type="reset"></th>
+        </tr>
+        <tr style="background-color: #FDEBD0">
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+        </tr>
+        <tr style="background-color: #FDEBD0">
+            <th align="right">อายุใช้งาน : </th>
+            <th align="left"><input name="txtVol[]" id="txtVol5" type="text" size="15"> วัน <br></th>
+        </tr>
+        <tr style="background-color: #FDEBD0">
+            <th align="right">คิดต่อวัน : </th>
+            <th align="left"><input name="txtVol[]" id="txtVol6" type="text" size="15"> วัน <br></th>
+        </tr>
+        <tr style="background-color: #FDEBD0">
+            <th align="right">ใช้ไปแล้ว : </th>
+            <th align="left"><input name="txtVol[]" id="txtVol7" type="text" size="15"> วัน <br></th>
+        </tr>
+        <tr style="background-color: #FDEBD0">
+            <th align="right">เหลือวัน : </th>
+            <th align="left"><input name="txtVol[]" id="txtVol8" type="text" size="15"> วัน <br></th>
+        </tr>
+        <tr style="background-color: #FDEBD0">
+            <th align="right">ต้องหักเงิน : </th>
+            <th align="left"><input name="txtVol[]" id="txtVol9" type="text" size="15" style="color:red;"> บาท <br></th>
+        </tr>
+        <tr style="background-color: #FDEBD0">
+            <th align="center" colspan="2">&nbsp;</th>
+        </tr>
+    </table>
+</form>
+</center>
+</body>
+</html>
